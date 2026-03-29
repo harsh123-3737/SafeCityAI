@@ -10,11 +10,13 @@ st.title("🚨SafecityAI: Universal monitor")
 #here we are loading the models
 @st.cache_resource
 def load_models():
-  h_model = torch.hub.load('ultralytics/yolov5', 'custom', path='/content/drive/MyDrive/SafeCityAI_Models/helmet_best.pt')
-  p_model = torch.hub.load('ultralytics/yolov5', 'custom', path='/content/drive/MyDrive/SafeCityAI_Models/plate_best.pt')
-  return h_model, p_model
-
-h_model, p_model = load_models()
+    # This tells the code to look inside the "models" folder in the same directory as app.py
+    h_path = os.path.join("models", "helmet_best.pt")
+    p_path = os.path.join("models", "plate_best.pt")
+    
+    h_model = torch.hub.load('ultralytics/yolov5', 'custom', path=h_path)
+    p_model = torch.hub.load('ultralytics/yolov5', 'custom', path=p_path)
+    return h_model, p_model
 
 #we are creating the tabs for Image and video
 tab1, tab2 = st.tabs(["📸 Image Inference", "📹 Video Inference"])
