@@ -15,3 +15,9 @@ A dual-model AI system designed to detect helmet violations and license plates f
 ### 📊 Models Used
 - YOLOv5s (Custom trained for Helmets)
 - YOLOv5s (Custom trained for License Plates)
+
+** run the download_models.py script  When a you  runs that script, it will automatically download .pt models files from my drive and  put them inside the models folder and try the working of safecity ai**
+
+ **demo link that i have tried you can check the video **
+ https://drive.google.com/file/d/119bAIVB0WIvt23twKe-neNiod3RZ9Iry/view?usp=drive_link
+ 
